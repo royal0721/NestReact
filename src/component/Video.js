@@ -8,6 +8,7 @@ const Video = (props) => {
   const [player, setPlayer] = useState(null);
 
   useEffect(() => {
+
     if (videoNode.current) {
       const _player = videojs(videoNode.current, props);
       setPlayer(_player);
@@ -17,6 +18,7 @@ const Video = (props) => {
         }
       };
     }
+    
   }, []);
 
   return (
