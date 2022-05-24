@@ -1,33 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import videojs from "video.js";
-import "video.js/dist/video-js.css";
+import React from "react";
+import Video from './component/Video'
 
-const Video = (props) => {
-  
-  const videoNode = useRef(null);
-  const [player, setPlayer] = useState(null);
-
-  useEffect(() => {
-    if (videoNode.current) {
-      const _player = videojs(videoNode.current, props);
-      setPlayer(_player);
-      return () => {
-        if (player !== null) {
-          player.dispose();
-        }
-      };
-    }
-  }, []);
-
-  return (
-    <div data-vjs-player>
-      <video ref={videoNode} className="video-js"></video>
-    </div>
-  );
-};
-
-export default function App() {
-  const play = {
+function App() {
+  const play＿details = {
     fill: true,
     fluid: true,
     autoplay: true,
@@ -42,7 +17,8 @@ export default function App() {
   };
   return (
     <div className="App">
-      <Video {...play} />
+      <Video {...play＿details} />
     </div>
   );
 }
+export default App;
