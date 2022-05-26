@@ -11,6 +11,9 @@ const common_1 = require("@nestjs/common");
 const serve_static_1 = require("@nestjs/serve-static");
 const path_1 = require("path");
 const app_controller_1 = require("./app.controller");
+const document_controller_1 = require("./document/document.controller");
+const app_service_1 = require("./app.service");
+const document_service_1 = require("./document/document.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -21,7 +24,8 @@ AppModule = __decorate([
                 exclude: ['/api*'],
             }),
         ],
-        controllers: [app_controller_1.AppController],
+        controllers: [app_controller_1.AppController, document_controller_1.DocumentController],
+        providers: [app_service_1.AppService, document_service_1.DocumentService]
     })
 ], AppModule);
 exports.AppModule = AppModule;
