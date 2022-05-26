@@ -14,6 +14,7 @@ const app_controller_1 = require("./app.controller");
 const document_controller_1 = require("./document/document.controller");
 const app_service_1 = require("./app.service");
 const document_service_1 = require("./document/document.service");
+const test_service_1 = require("./service/test.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -25,7 +26,7 @@ AppModule = __decorate([
             }),
         ],
         controllers: [app_controller_1.AppController, document_controller_1.DocumentController],
-        providers: [app_service_1.AppService, document_service_1.DocumentService]
+        providers: [app_service_1.AppService, document_service_1.DocumentService, test_service_1.default]
     })
 ], AppModule);
 exports.AppModule = AppModule;

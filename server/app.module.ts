@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import {DocumentController} from './document/document.controller'
 import { AppService } from './app.service';
 import { DocumentService } from './document/document.service';
+import TestService from './service/test.service';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
@@ -13,6 +14,6 @@ import { DocumentService } from './document/document.service';
     }),
   ],
   controllers: [AppController,DocumentController],
-  providers: [AppService, DocumentService]
+  providers: [AppService, DocumentService, TestService]
 })
 export class AppModule {}
