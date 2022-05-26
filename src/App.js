@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes , Route, NavLink} from "react-router-dom";
 import HomePage from "./component/HomePage";
 import PlayList from "./component/PlayList";
+import './App.css';
+
 function App() {
   const linkStyle = {
     textDecoration: "none",
@@ -11,8 +13,10 @@ function App() {
   };
   return (
     <BrowserRouter>
-      <NavLink to="/" style={linkStyle}>首頁</NavLink>
-      <NavLink to="/playlist" style={linkStyle}>節目表</NavLink>
+      <div class="upper-nav">
+        <NavLink to="/" style={linkStyle}>首頁</NavLink>
+        <NavLink to="/playlist" style={linkStyle}>節目表</NavLink>
+      </div>
       <Routes>
         <Route path="/" element={<HomePage/>}/> 
         <Route path="/playlist" element={<PlayList/>}/>
