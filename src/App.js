@@ -3,6 +3,7 @@ import { BrowserRouter, Routes , Route, NavLink} from "react-router-dom";
 import HomePage from "./component/HomePage";
 import PlayList from "./component/PlayList";
 import './App.css';
+import './style.css';
 
 function App() {
   const linkStyle = {
@@ -13,9 +14,9 @@ function App() {
   };
   return (
     <BrowserRouter>
-      <div class="upper-nav">
-        <NavLink to="/" style={linkStyle}>首頁</NavLink>
-        <NavLink to="/playlist" style={linkStyle}>節目表</NavLink>
+      <div className="nav">
+        <NavLink to="/" >首頁</NavLink>
+        <NavLink to="/playlist" >節目表</NavLink>
       </div>
       <Routes>
         <Route path="/" element={<HomePage/>}/> 
