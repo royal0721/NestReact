@@ -1,18 +1,18 @@
 import React from "react";
-import { BrowserRouter, Routes , Route, Link} from "react-router-dom";
+import { BrowserRouter, Routes , Route, NavLink} from "react-router-dom";
 import HomePage from "./component/HomePage";
 import PlayList from "./component/PlayList";
 function App() {
   const linkStyle = {
-    margin: "1rem",
     textDecoration: "none",
-    color: 'blue',
-    padding: '20px'
+    color: 'white',
+    padding: '0 20px',
+    backgroundColor: "black"
   };
   return (
     <BrowserRouter>
-      <Link to="/" style={linkStyle}>首頁</Link>
-      <Link to="/playlist" style={linkStyle}>節目表</Link>
+      <NavLink to="/" style={linkStyle}>首頁</NavLink>
+      <NavLink to="/playlist" style={linkStyle}>節目表</NavLink>
       <Routes>
         <Route path="/" element={<HomePage/>}/> 
         <Route path="/playlist" element={<PlayList/>}/>

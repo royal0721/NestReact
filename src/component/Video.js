@@ -23,7 +23,7 @@ const Video = (props) => {
 
   return (
     <div data-vjs-player>
-      <video ref={videoNode} className="video-js"></video>
+      <video ref={videoNode} className="video-js vjs-default-skin" width="640px" height="267px"></video>
     </div>
   );
 };
