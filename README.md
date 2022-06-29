@@ -4,7 +4,7 @@ In the project directory, you can run:
 ### `npm run build:react`
 
 Build A react App first
-
+### `npm run build:nest`
 ### `npm run start`
 
 Runs the app with the node server (Nest.js).\
